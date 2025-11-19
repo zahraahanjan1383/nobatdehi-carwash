@@ -28,13 +28,7 @@ _نام ئانشجو :[زهرا آهنجان ]
 
  ## فناوری ها وابزار های پیشنهادی
 
- زبان‌های برنامه‌نویسی: Python / JavaScript / PHP
 
-فریمورک‌های پیشنهادی: Django / Laravel / React
-
-پایگاه داده: MySQL / PostgreSQL / MongoDB
-
-طراحی سیستم: RESTful API یا GraphQL
 
 ## مستندات 
 
