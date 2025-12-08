@@ -24,5 +24,5 @@
 | 3 | User Stories | داستان‌های کاربر و معیارهای پذیرش | [user_stories.md](docs/user_stories.md) |
 | 4 | سناریوهای تست | بررسی رفتار سیستم در شرایط مختلف | [test_scenarios.md](docs/test_scenarios.md) |
 | 5 | Test Cases | تست‌های دقیق با مراحل و انتظار | [test_cases.md](docs/test_cases.md) |
-| 6 | دیاگرام Use Case | دیاگرام تصویری تعامل نقش‌ها با سیستم | [usecase_diagram.md](docs/usecase_diagram.md) |
-| 7 | دیاگرام Activity | جریان رزرو نوبت و پرداخت | [activity_diagram.md](docs/activity_diagram.md) ||
+| 6 | دیاگرام Use Case | دیاگرام تصویری تعامل نقش‌ها با سیستم | [use_cases_diagram.md](docs/use_cases_diagram.md) |
+| 7 | دیاگرام Activity | جریان رزرو نوبت و پرداخت | [activity_diagram.md](docs/activity_diagram.md) |
