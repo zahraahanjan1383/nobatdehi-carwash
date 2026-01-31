@@ -11,66 +11,68 @@
   
 
 
+
 flowchart TB
 
-    %% تعریف نقش‌ها با شکل و رنگ متفاوت
-    A([مشتری]):::actorStyle
-    B([اپراتور کارواش]):::actorStyle2
-    C([مدیر سیستم]):::actorStyle3
+    %% --- Actors ---
+    Customer([👤 مشتری]):::actor
+    Operator([🧑🔧 اپراتور کارواش]):::actor2
+    Admin([🛠 مدیر سیستم]):::actor3
 
-    %% Use Caseها با اشکال مختلف
-    UC1((ثبت‌نام/ورود)):::usecaseBlue
-    UC2{{انتخاب خدمت}}:::usecaseGreen
-    UC3([انتخاب زمان نوبت]):::usecaseYellow
-    UC4([پرداخت آنلاین]):::usecaseRed
-    UC5((مشاهده نوبت‌ها)):::usecaseBlue
-    UC6{{لغو یا ویرایش نوبت}}:::usecaseGreen
-    UC7([دریافت رسید]):::usecaseYellow
+    %% --- Customer Use Cases ---
+    UC1((ثبت‌نام / ورود)):::ucBlue
+    UC2((انتخاب خدمت)):::ucGreen
+    UC3((انتخاب زمان نوبت)):::ucYellow
+    UC4((پرداخت آنلاین)):::ucRed
+    UC5((مشاهده نوبت‌ها)):::ucBlue
+    UC6((لغو / ویرایش نوبت)):::ucGreen
+    UC7((دریافت رسید)):::ucYellow
 
-    UC8((مشاهده لیست نوبت‌ها)):::usecaseBlue
-    UC9{{تأیید یا رد نوبت}}:::usecaseGreen
-    UC10([ثبت وضعیت انجام خدمت]):::usecaseYellow
-    UC11([مدیریت ظرفیت روزانه]):::usecaseRed
+    %% --- Operator Use Cases ---
+    UC8((مشاهده لیست نوبت‌ها)):::ucBlue
+    UC9((تأیید / رد نوبت)):::ucGreen
+    UC10((ثبت وضعیت انجام خدمت)):::ucYellow
+    UC11((مدیریت ظرفیت روزانه)):::ucRed
 
-    UC12((مدیریت خدمات و قیمت‌گذاری)):::usecaseBlue
-    UC13{{مدیریت کاربران}}:::usecaseGreen
-    UC14([مشاهده گزارش‌ها]):::usecaseYellow
-    UC15([ارسال اعلان‌ها]):::usecaseRed
-    UC16((تنظیمات سیستم)):::usecaseBlue
+    %% --- Admin Use Cases ---
+    UC12((مدیریت خدمات و قیمت‌گذاری)):::ucBlue
+    UC13((مدیریت کاربران)):::ucGreen
+    UC14((مشاهده گزارش‌ها)):::ucYellow
+    UC15((ارسال اعلان‌ها)):::ucRed
+    UC16((تنظیمات سیستم)):::ucBlue
 
-    %% ارتباط‌ها
-    A --> UC1
-    A --> UC2
-    A --> UC3
-    A --> UC4
-    A --> UC5
-    A --> UC6
-    A --> UC7
+    %% --- Relations ---
+    Customer --> UC1
+    Customer --> UC2
+    Customer --> UC3
+    Customer --> UC4
+    Customer --> UC5
+    Customer --> UC6
+    Customer --> UC7
 
-    B --> UC1
-    B --> UC8
-    B --> UC9
-    B --> UC10
-    B --> UC11
+    Operator --> UC8
+    Operator --> UC9
+    Operator --> UC10
+    Operator --> UC11
 
-    C --> UC1
-    C --> UC12
-    C --> UC13
-    C --> UC14
-    C --> UC15
-    C --> UC16
+    Admin --> UC12
+    Admin --> UC13
+    Admin --> UC14
+    Admin --> UC15
+    Admin --> UC16
 
+    %% --- Internal Relations ---
+    UC4 --> UC7
     UC3 --> UC11
-    UC4 --> UC5
-    UC9 --> UC5
+    UC9 --> UC8
     UC15 --> UC5
 
-    %% استایل‌ها
-    classDef actorStyle fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef actorStyle2 fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef actorStyle3 fill:#bfb,stroke:#333,stroke-width:2px;
+    %% --- Styles ---
+    classDef actor fill:#ffe6ff,stroke:#333,stroke-width:2px;
+    classDef actor2 fill:#e6e6ff,stroke:#333,stroke-width:2px;
+    classDef actor3 fill:#e6ffe6,stroke:#333,stroke-width:2px;
 
-    classDef usecaseBlue fill:#ccf,stroke:#333,stroke-width:1px;
-    classDef usecaseGreen fill:#cfc,stroke:#333,stroke-width:1px;
-    classDef usecaseYellow fill:#ffc,stroke:#333,stroke-width:1px;
-    classDef usecaseRed fill:#fcc,stroke:#333,stroke-width:1px;
+    classDef ucBlue fill:#dce6ff,stroke:#333,stroke-width:1px;
+    classDef ucGreen fill:#d9ffe0,stroke:#333,stroke-width:1px;
+    classDef ucYellow fill:#fff7cc,stroke:#333,stroke-width:1px;
+    classDef ucRed fill:#ffd6d6,stroke:#333,stroke-width:1px;
